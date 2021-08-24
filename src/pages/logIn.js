@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Row, Layout, Form, Input } from "antd";
+import { Button, Row, Layout, Form, Input, Card } from "antd";
 import "../styles/landingPage.css";
 import Logo from "../assets/Dms.png";
 import Dman from "../assets/Dman.png";
@@ -42,8 +42,16 @@ const LogIn = () => {
               </Button>
             </div>
             {/* right side */}
-            <div className="right bg-white" style={{ width: "45%" }}>
-              <div style={{ margin: 48 }}>
+            <Card
+              className="right bg-white"
+              style={{
+                width: "45%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <div style={{ margin: 28 }}>
                 <h3 className="m-text" style={{ marginTop: 40 }}>
                   You're Welcome Back!
                 </h3>
@@ -92,12 +100,12 @@ const LogIn = () => {
                     </Link>
                   </text>
 
-                  <Link to="/dashBoard">
+                  <Link to="/dashboard">
                     <Button className="btn">LogIn</Button>
                   </Link>
                 </Row>
               </div>
-            </div>
+            </Card>
           </Row>
         </div>
       </Layout>

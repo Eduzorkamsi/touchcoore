@@ -1,7 +1,7 @@
 import "./App.css";
 import LandingPage from "./pages/landingPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import LogIn from "./styles/logIn";
+import LogIn from "./pages/logIn";
 import DashBoard from "./pages/dashBoard";
 
 function App() {
@@ -9,10 +9,10 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/dashBoard">
+          <Route path="/dashboard">
             <DashBoard />
           </Route>
-          <Route path="/logIn">
+          <Route path="/login">
             <LogIn />
           </Route>
           <Route path="/">

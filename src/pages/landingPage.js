@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Row, Layout, Progress, Form, Input } from "antd";
+import { Button, Row, Layout, Progress, Form, Input, Card } from "antd";
 import "../styles/landingPage.css";
 import Logo from "../assets/Dms.png";
 import Dman from "../assets/Dman.png";
@@ -42,11 +42,17 @@ const LandingPage = () => {
               </Button>
             </div>
             {/* right side */}
-            <div
+            <Card
               className="right bg-white"
-              style={{ width: "45%", marginBottom: 80 }}
+              style={{
+                width: "45%",
+                marginBottom: 80,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
             >
-              <div style={{ margin: 48 }}>
+              <div style={{ margin: 28 }}>
                 <Progress strokeLinecap="square" percent={75} />
                 <h3 className="m-text" style={{ marginTop: 40 }}>
                   Basic Information
@@ -114,7 +120,7 @@ const LandingPage = () => {
                     style={{ marginLeft: 52, marginRight: 87, marginTop: 8 }}
                   >
                     Got an account?
-                    <Link to="/logIn">
+                    <Link to="/login">
                       <span className="terms">Sign in</span>
                     </Link>
                   </text>
@@ -122,7 +128,7 @@ const LandingPage = () => {
                   <Button className="btn">Register</Button>
                 </Row>
               </div>
-            </div>
+            </Card>
           </Row>
         </div>
       </Layout>
