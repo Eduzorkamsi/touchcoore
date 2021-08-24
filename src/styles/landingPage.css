@@ -1,0 +1,80 @@
+.bg-grey {
+  background-color: #e5e5e5;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.lg-text {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.xs-text {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 40%;
+}
+
+.xxs-text {
+  font-size: 10px;
+  font-weight: 400;
+  color: #000;
+  line-height: 18px;
+}
+
+.terms {
+  color: #3570ce;
+}
+
+.btn {
+  background-color: #053582;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.ant-progress-success-bg,
+.ant-progress-bg {
+  background-color: #053582;
+}
+
+.ant-progress-text {
+  display: none;
+}
+
+.m-text {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.s-text {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.ant-input {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  min-width: 0;
+  padding: 10px 11px;
+  font-size: 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+}
