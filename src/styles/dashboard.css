@@ -6,6 +6,26 @@
   background-color: #ffffff;
 }
 
-/* .ant-layout-header {
-  background-color: #ffffff;
-} */
+.ant-badge-dot {
+  background-color: #34b53a;
+}
+
+.ant-badge-count,
+.ant-badge-dot,
+.ant-badge .ant-scroll-number-custom-component {
+  position: absolute;
+  top: 25px;
+  right: 3px;
+}
+
+.ant-input-search
+  > .ant-input-group
+  > .ant-input-group-addon:last-child
+  .ant-input-search-button {
+  border: none;
+}
+
+.m-text {
+  font-size: 22px;
+  font-weight: 500;
+}
