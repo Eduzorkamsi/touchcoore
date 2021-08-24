@@ -4,6 +4,7 @@ import { DownOutlined } from "@ant-design/icons";
 import Logo1 from "../assets/dashboardlogo.png";
 import "../styles/dashboard.css";
 import Avatar1 from "../assets/avatar.png";
+import Avatar2 from "../assets/avatar2.png";
 import Dashboardimg from "../assets/Dashboard.png";
 import Companies from "../assets/Companies.png";
 import Cancelled from "../assets/cancelled.png";
@@ -17,6 +18,7 @@ import Settings from "../assets/settings.png";
 import Subscription from "../assets/subscription.png";
 import Support from "../assets/support.png";
 import YCompany from "../assets/ycompany.png";
+import Dman2 from "../assets/dman2.png";
 
 const DashBoard = () => {
   //   const { SubMenu } = Menu;
@@ -146,7 +148,7 @@ const DashBoard = () => {
                   >
                     <div style={{ display: "flex", flexDirection: "row" }}>
                       <text>
-                        Total Exchange <br /> Pool Orders
+                        Total <br /> Companies
                       </text>
                       <img src={YCompany} alt="gpool" />
                     </div>
@@ -169,7 +171,7 @@ const DashBoard = () => {
                   >
                     <div style={{ display: "flex", flexDirection: "row" }}>
                       <text>
-                        Total Exchange <br /> Pool Orders
+                        Total <br /> Cancelled Orders
                       </text>
                       <img src={Cancelled} alt="gpool" />
                     </div>
@@ -192,7 +194,7 @@ const DashBoard = () => {
                   >
                     <div style={{ display: "flex", flexDirection: "row" }}>
                       <text>
-                        Total Exchange <br /> Pool Orders
+                        Total <br /> Created Orders
                       </text>
                       <img src={Ppool} alt="gpool" />
                     </div>
@@ -218,20 +220,33 @@ const DashBoard = () => {
                         height: 357,
                         marginRight: 40,
                         borderRadius: 12,
+                        display: "flex",
+                        flexDirection: "column",
                       }}
                     >
-                      <p>Card content</p>
-                      <p>Card content</p>
-                      <p>Card content</p>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          marginBottom: 29.38,
+                        }}
+                      >
+                        <text>120</text>
+                        <text>
+                          Companies sent orders <br /> to delivery pool today
+                        </text>
+                      </div>
+                      <div>
+                        <Avatar src={Avatar2} />
+                      </div>
+                      <div></div>
                     </Card>
 
                     <Card style={{ width: 692, borderRadius: 12 }}>
-                      <p>Card content</p>
-                      <p>Card content</p>
+                      <text>Orders Today</text>
                       <Progress type="circle" percent={86} width={80} />
                       <Progress type="circle" percent={67} width={80} />
                       <Progress type="circle" percent={14} width={80} />
-                      <p>Card content</p>
                     </Card>
                   </div>
                   <div style={{ display: "flex", flexDirection: "row" }}>
@@ -243,9 +258,14 @@ const DashBoard = () => {
                         borderRadius: 12,
                       }}
                     >
-                      <p>Card content</p>
-                      <p>Card content</p>
-                      <p>Card content</p>
+                      <div>
+                        <text>Exchange Pool Today</text>
+                      </div>
+                      <div>
+                        <img src={Dman2} alt="dman" />
+                      </div>
+                      <div></div>
+                      <div></div>
                     </Card>
 
                     <Card style={{ width: 569.08, borderRadius: 12 }}>
