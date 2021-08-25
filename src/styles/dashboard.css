@@ -37,7 +37,7 @@
 
 .ls-text {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .s-text {
@@ -51,10 +51,40 @@
   font-weight: 400;
 }
 
+.xsb-text {
+  font-size: 14px;
+
+  font-weight: bold;
+}
+.rs-num {
+  color: #ff3a29;
+  font-size: 20px;
+  font-weight: 400;
+}
+
 .r-num {
   color: #ff3a29;
   font-size: 38px;
   font-weight: 700;
+}
+
+.num {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.b-num {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* color code */
+.r {
+  color: #ff3a29;
+}
+
+.b {
+  color: #4339f2;
 }
 
 .ant-menu-title-content {

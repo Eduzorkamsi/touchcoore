@@ -20,6 +20,8 @@ import Support from "../assets/support.png";
 import YCompany from "../assets/ycompany.png";
 import Dman2 from "../assets/dman2.png";
 import Yline from "../assets/yline.png";
+import Bline from "../assets/bline.png";
+import Rline from "../assets/rline.png";
 
 const DashBoard = () => {
   //   const { SubMenu } = Menu;
@@ -342,6 +344,7 @@ total created orders */}
                       marginBottom: 40,
                     }}
                   >
+                    {/* ---------companies sent orders to delivery pool today */}
                     <Card
                       style={{
                         width: 204,
@@ -359,17 +362,28 @@ total created orders */}
                           marginBottom: 29.38,
                         }}
                       >
-                        <text>120</text>
-                        <text>
+                        <text className="b-num">120</text>
+                        <text className="xsb-text">
                           Companies sent orders <br /> to delivery pool today
                         </text>
                       </div>
-                      <div>
+                      <div style={{ marginBottom: "27.11px" }}>
                         <Avatar src={Avatar2} />
                       </div>
-                      <div></div>
+                      <text className="rs-num">+84%</text>
+                      <img
+                        style={{ objectFit: "contain" }}
+                        src={Bline}
+                        alt="line"
+                      />
+                      <text
+                        className="xsb-text"
+                        style={{ marginTop: "10.84px" }}
+                      >
+                        Compared to yesterday
+                      </text>
                     </Card>
-
+                    {/* -------------orders today */}
                     <Card style={{ width: 692, borderRadius: 12 }}>
                       <text>Orders Today</text>
                       <Progress type="circle" percent={86} width={80} />
@@ -378,6 +392,7 @@ total created orders */}
                     </Card>
                   </div>
                   <div style={{ display: "flex", flexDirection: "row" }}>
+                    {/* -----------exchange pool today */}
                     <Card
                       style={{
                         width: 326,
@@ -386,14 +401,74 @@ total created orders */}
                         borderRadius: 12,
                       }}
                     >
-                      <div>
-                        <text>Exchange Pool Today</text>
+                      <div style={{ display: "flex", flexDirection: "row" }}>
+                        <div
+                          style={{ display: "flex", flexDirection: "column" }}
+                        >
+                          <text
+                            style={{
+                              fontSize: "16px",
+                              fontWeight: 700,
+                              minWidth: "max-content",
+                            }}
+                          >
+                            Exchange Pool Today
+                          </text>
+                          <text
+                            className="xs-text"
+                            style={{ color: "#92929d" }}
+                          >
+                            Most orders picked by:
+                          </text>
+                          <img
+                            src={Dman2}
+                            alt="dman"
+                            style={{
+                              width: "fit-content",
+                              marginTop: 10,
+                              marginBottom: 10,
+                            }}
+                          />
+                          <text style={{ fontSize: "16px", fontWeight: 700 }}>
+                            FZ Deliveries
+                          </text>
+                          <text className="s-text">Allen, Lagos</text>
+                          <text className="num r" style={{ marginTop: 15 }}>
+                            504
+                          </text>
+                          <text className="s-text">Orders</text>
+                          <text className="num b" style={{ marginTop: 15 }}>
+                            267
+                          </text>
+                          <text className="s-text">Pushed to pool</text>
+                        </div>
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            marginTop: "140.38px",
+                            marginLeft: "-24px",
+                          }}
+                        >
+                          <text className="b-num" style={{ fontSize: "30px" }}>
+                            N340,000
+                          </text>
+                          <img
+                            style={{ objectFit: "contain" }}
+                            src={Rline}
+                            alt="line"
+                          />
+                          <text
+                            className="xsb-text"
+                            style={{
+                              marginTop: "10.84px",
+                              minWidth: "max-content",
+                            }}
+                          >
+                            Compared to yesterday
+                          </text>
+                        </div>
                       </div>
-                      <div>
-                        <img src={Dman2} alt="dman" />
-                      </div>
-                      <div></div>
-                      <div></div>
                     </Card>
 
                     <Card style={{ width: 569.08, borderRadius: 12 }}>
