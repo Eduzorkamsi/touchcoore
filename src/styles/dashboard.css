@@ -102,3 +102,8 @@
   > .ant-menu-title-content {
   min-width: fit-content;
 }
+
+.ant-badge-status-dot {
+  width: 14px;
+  height: 14px;
+}

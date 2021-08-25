@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Menu, Card, Avatar, Progress } from "antd";
+import { Layout, Menu, Card, Avatar, Progress, Badge } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import Logo1 from "../assets/dashboardlogo.png";
 import "../styles/dashboard.css";
@@ -22,6 +22,7 @@ import Dman2 from "../assets/dman2.png";
 import Yline from "../assets/yline.png";
 import Bline from "../assets/bline.png";
 import Rline from "../assets/rline.png";
+// import Chartjs from "../component/chart";
 
 const DashBoard = () => {
   //   const { SubMenu } = Menu;
@@ -385,10 +386,85 @@ total created orders */}
                     </Card>
                     {/* -------------orders today */}
                     <Card style={{ width: 692, borderRadius: 12 }}>
-                      <text>Orders Today</text>
-                      <Progress type="circle" percent={86} width={80} />
-                      <Progress type="circle" percent={67} width={80} />
-                      <Progress type="circle" percent={14} width={80} />
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          marginTop: "10px",
+                        }}
+                      >
+                        <text className="ml-text">Orders Today</text>
+                        <text
+                          className="xs-text"
+                          style={{
+                            color: "#92929D",
+                            marginLeft: "65%",
+                            display: "flex",
+                            flexDirection: "row",
+                            marginTop: "10px",
+                          }}
+                        >
+                          Daily{" "}
+                          <DownOutlined
+                            style={{
+                              marginLeft: "2px",
+                              marginTop: "3px",
+                              color: "#000",
+                            }}
+                          />
+                        </text>
+                      </div>
+                      <div style={{ display: "flex", flexDirection: "row" }}>
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                          }}
+                        >
+                          <text className="xsb-text">
+                            <Badge color="green" />
+                            Delivered
+                          </text>
+                          <text className="b-num" style={{ fontSize: "24px" }}>
+                            320
+                          </text>
+                        </div>
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            marginLeft: "22px",
+                          }}
+                        >
+                          <text className="xsb-text">
+                            <Badge color="blue" />
+                            Reviews
+                          </text>
+                          <text className="b-num" style={{ fontSize: "24px" }}>
+                            230
+                          </text>
+                        </div>
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            marginLeft: "22px",
+                          }}
+                        >
+                          <text className="xsb-text">
+                            <Badge color="red" />
+                            Cancelled
+                          </text>
+                          <text className="b-num" style={{ fontSize: "24px" }}>
+                            80
+                          </text>
+                        </div>
+                      </div>
+                      <div style={{ float: "right" }}>
+                        <Progress type="circle" percent={86} width={80} />
+                        <Progress type="circle" percent={67} width={80} />
+                        <Progress type="circle" percent={14} width={80} />
+                      </div>
                     </Card>
                   </div>
                   <div style={{ display: "flex", flexDirection: "row" }}>
