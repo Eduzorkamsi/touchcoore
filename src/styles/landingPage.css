@@ -44,6 +44,10 @@
   border-radius: 10px;
 }
 
+.ant-layout {
+  min-width: max-content;
+}
+
 .ant-progress-success-bg,
 .ant-progress-bg {
   background-color: #053582;

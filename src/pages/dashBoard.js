@@ -22,6 +22,7 @@ import Dman2 from "../assets/dman2.png";
 import Yline from "../assets/yline.png";
 import Bline from "../assets/bline.png";
 import Rline from "../assets/rline.png";
+import { Link } from "react-router-dom";
 // import Chartjs from "../component/chart";
 
 const DashBoard = () => {
@@ -35,7 +36,14 @@ const DashBoard = () => {
           className="header bg-white"
           style={{ display: "flex", flexDirection: "row" }}
         >
-          <img src={Logo1} alt="dashboardlogo" style={{ objectFit: "none" }} />
+          <Link to="/">
+            <img
+              src={Logo1}
+              alt="dashboardlogo"
+              style={{ objectFit: "none" }}
+            />
+          </Link>
+
           <Menu
             mode="horizontal"
             style={{
