@@ -1,9 +1,9 @@
 import React from "react";
-import { Layout, Menu, Card, Avatar, Badge, Progress } from "antd";
+import { Layout, Menu, Card, Avatar, Progress } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import Logo1 from "../assets/dashboardlogo.png";
 import "../styles/dashboard.css";
-import Avatar1 from "../assets/avatar.png";
+// import Avatar1 from "../assets/avatar.png";
 import Avatar2 from "../assets/avatar2.png";
 import Dashboardimg from "../assets/Dashboard.png";
 import Companies from "../assets/Companies.png";
@@ -19,6 +19,7 @@ import Subscription from "../assets/subscription.png";
 import Support from "../assets/support.png";
 import YCompany from "../assets/ycompany.png";
 import Dman2 from "../assets/dman2.png";
+import Yline from "../assets/yline.png";
 
 const DashBoard = () => {
   //   const { SubMenu } = Menu;
@@ -40,7 +41,7 @@ const DashBoard = () => {
               marginLeft: "8%",
             }}
           >
-            <Menu.Item>
+            {/* <Menu.Item>
               <text>Search</text>
             </Menu.Item>
             <Menu.Item className="avatar1">
@@ -51,6 +52,12 @@ const DashBoard = () => {
                 </Badge>
               </span>
             </Menu.Item>
+            <Menu.Item>
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <text>Jude Adam</text>
+                <text>Admin</text>
+              </div>
+            </Menu.Item> */}
           </Menu>
         </Header>
         <Layout>
@@ -62,39 +69,57 @@ const DashBoard = () => {
             >
               <Menu.Item key="1">
                 <img src={Dashboardimg} alt="dash" />
-                Dashboard
+                <text className="s-text" style={{ marginLeft: "28px" }}>
+                  Dashboard
+                </text>
               </Menu.Item>
               <Menu.Item key="2">
                 <img src={Companies} alt="comp" />
-                Companies
+                <text className="s-text" style={{ marginLeft: "28px" }}>
+                  Companies
+                </text>
               </Menu.Item>
               <Menu.Item key="3">
                 <img src={Pool} alt="pool" />
-                Order Pool
+                <text className="s-text" style={{ marginLeft: "28px" }}>
+                  Order Pool
+                </text>
               </Menu.Item>
               <Menu.Item key="4">
                 <img src={History} alt="hist" />
-                Order History
+                <text className="s-text" style={{ marginLeft: "28px" }}>
+                  Order History
+                </text>
               </Menu.Item>
               <Menu.Item key="5">
                 <img src={Subscription} alt="sub" />
-                Subscriptions
+                <text className="s-text" style={{ marginLeft: "28px" }}>
+                  Subscriptions
+                </text>
               </Menu.Item>
               <Menu.Item key="6">
                 <img src={Earnings} alt="earn" />
-                Earnings
+                <text className="s-text" style={{ marginLeft: "28px" }}>
+                  Earnings
+                </text>
               </Menu.Item>
               <Menu.Item key="7">
                 <img src={Reports} alt="rep" />
-                Reports
+                <text className="s-text" style={{ marginLeft: "28px" }}>
+                  Reports
+                </text>
               </Menu.Item>
               <Menu.Item key="8">
                 <img src={Settings} alt="sett" />
-                Settings
+                <text className="s-text" style={{ marginLeft: "28px" }}>
+                  Settings
+                </text>
               </Menu.Item>
               <Menu.Item key="9">
                 <img src={Support} alt="supp" />
-                Supports
+                <text className="s-text" style={{ marginLeft: "28px" }}>
+                  Supports
+                </text>
               </Menu.Item>
             </Menu>
           </Sider>
@@ -102,7 +127,7 @@ const DashBoard = () => {
             className="bg-grey"
             style={{ padding: "21.5px 39px 24px", minWidth: "fit-content" }}
           >
-            <text>Dashboard</text>
+            <text className="ml-text">Dashboard</text>
             <Content
               className="site-layout-background"
               style={{
@@ -112,31 +137,57 @@ const DashBoard = () => {
             >
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <div style={{ marginRight: 40 }}>
+                  {/* ----------------------------------- */}
+                  {/* total exchange card */}
                   <Card
                     style={{
                       width: 300,
-                      // height: 150,
                       marginBottom: 41,
                       borderRadius: 12,
-                      // Padding: "24px 25px 24px 25px",
                       display: "flex",
                       flexDirection: "column",
                     }}
                   >
-                    <div style={{ display: "flex", flexDirection: "row" }}>
-                      <text>
+                    <div>
+                      <text className="ls-text">
                         Total Exchange <br /> Pool Orders
                       </text>
-                      <img src={Gpool} alt="gpool" />
+                      <img
+                        src={Gpool}
+                        alt="gpool"
+                        style={{ float: "right", marginTop: "-20px" }}
+                      />
                     </div>
                     <div style={{ display: "flex", flexDirection: "row" }}>
-                      <text>504</text>
-                      <text>
-                        Today <DownOutlined />
+                      <text className="r-num">504</text>
+                      <img
+                        style={{ objectFit: "contain" }}
+                        src={Yline}
+                        alt="line"
+                      />
+                      <text
+                        className="xs-text"
+                        style={{
+                          color: "#92929D",
+                          marginTop: "30.87px",
+                          marginLeft: "76px",
+                          display: "flex",
+                          flexDirection: "row",
+                        }}
+                      >
+                        Today{" "}
+                        <DownOutlined
+                          style={{
+                            marginTop: "5px",
+                            marginLeft: "2px",
+                            color: "#000",
+                          }}
+                        />
                       </text>
                     </div>
                   </Card>
-
+                  {/* ---------------------
+total companies */}
                   <Card
                     style={{
                       width: 300,
@@ -146,20 +197,46 @@ const DashBoard = () => {
                       flexDirection: "column",
                     }}
                   >
-                    <div style={{ display: "flex", flexDirection: "row" }}>
-                      <text>
+                    <div>
+                      <text className="ls-text">
                         Total <br /> Companies
                       </text>
-                      <img src={YCompany} alt="gpool" />
+                      <img
+                        src={YCompany}
+                        alt="gpool"
+                        style={{ float: "right", marginTop: "-20px" }}
+                      />
                     </div>
                     <div style={{ display: "flex", flexDirection: "row" }}>
-                      <text>504</text>
-                      <text>
-                        Today <DownOutlined />
+                      <text className="r-num">504</text>
+                      <img
+                        style={{ objectFit: "contain" }}
+                        src={Yline}
+                        alt="line"
+                      />
+                      <text
+                        className="xs-text"
+                        style={{
+                          color: "#92929D",
+                          marginTop: "30.87px",
+                          marginLeft: "76px",
+                          display: "flex",
+                          flexDirection: "row",
+                        }}
+                      >
+                        Today{" "}
+                        <DownOutlined
+                          style={{
+                            marginTop: "5px",
+                            marginLeft: "2px",
+                            color: "#000",
+                          }}
+                        />
                       </text>
                     </div>
                   </Card>
-
+                  {/* -----------
+total cancelled orders */}
                   <Card
                     style={{
                       width: 300,
@@ -169,20 +246,46 @@ const DashBoard = () => {
                       flexDirection: "column",
                     }}
                   >
-                    <div style={{ display: "flex", flexDirection: "row" }}>
-                      <text>
+                    <div>
+                      <text className="ls-text">
                         Total <br /> Cancelled Orders
                       </text>
-                      <img src={Cancelled} alt="gpool" />
+                      <img
+                        src={Cancelled}
+                        alt="gpool"
+                        style={{ float: "right", marginTop: "-20px" }}
+                      />
                     </div>
                     <div style={{ display: "flex", flexDirection: "row" }}>
-                      <text>504</text>
-                      <text>
-                        Today <DownOutlined />
+                      <text className="r-num">504</text>
+                      <img
+                        style={{ objectFit: "contain" }}
+                        src={Yline}
+                        alt="line"
+                      />
+                      <text
+                        className="xs-text"
+                        style={{
+                          color: "#92929D",
+                          marginTop: "30.87px",
+                          marginLeft: "76px",
+                          display: "flex",
+                          flexDirection: "row",
+                        }}
+                      >
+                        Today{" "}
+                        <DownOutlined
+                          style={{
+                            marginTop: "5px",
+                            marginLeft: "2px",
+                            color: "#000",
+                          }}
+                        />
                       </text>
                     </div>
                   </Card>
-
+                  {/* ------
+total created orders */}
                   <Card
                     style={{
                       width: 300,
@@ -192,16 +295,41 @@ const DashBoard = () => {
                       flexDirection: "column",
                     }}
                   >
-                    <div style={{ display: "flex", flexDirection: "row" }}>
-                      <text>
+                    <div>
+                      <text className="ls-text">
                         Total <br /> Created Orders
                       </text>
-                      <img src={Ppool} alt="gpool" />
+                      <img
+                        src={Ppool}
+                        alt="gpool"
+                        style={{ float: "right", marginTop: "-20px" }}
+                      />
                     </div>
                     <div style={{ display: "flex", flexDirection: "row" }}>
-                      <text>504</text>
-                      <text>
-                        Today <DownOutlined />
+                      <text className="r-num">504</text>
+                      <img
+                        style={{ objectFit: "contain" }}
+                        src={Yline}
+                        alt="line"
+                      />
+                      <text
+                        className="xs-text"
+                        style={{
+                          color: "#92929D",
+                          marginTop: "30.87px",
+                          marginLeft: "76px",
+                          display: "flex",
+                          flexDirection: "row",
+                        }}
+                      >
+                        Today{" "}
+                        <DownOutlined
+                          style={{
+                            marginTop: "5px",
+                            marginLeft: "2px",
+                            color: "#000",
+                          }}
+                        />
                       </text>
                     </div>
                   </Card>
