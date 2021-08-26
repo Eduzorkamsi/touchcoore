@@ -53,7 +53,11 @@ const LandingPage = () => {
               }}
             >
               <div style={{ margin: 28 }}>
-                <Progress strokeLinecap="square" percent={75} />
+                <Progress
+                  strokeLinecap="square"
+                  percent={75}
+                  showInfo={false}
+                />
                 <h3 className="m-text" style={{ marginTop: 40 }}>
                   Basic Information
                 </h3>

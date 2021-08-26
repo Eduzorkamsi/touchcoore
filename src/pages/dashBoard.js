@@ -23,6 +23,7 @@ import Yline from "../assets/yline.png";
 import Bline from "../assets/bline.png";
 import Rline from "../assets/rline.png";
 import { Link } from "react-router-dom";
+import Cchart from "../assets/cchart.png";
 // import Chartjs from "../component/chart";
 
 const DashBoard = () => {
@@ -468,11 +469,32 @@ total created orders */}
                           </text>
                         </div>
                       </div>
+
                       <div style={{ float: "right" }}>
-                        <Progress type="circle" percent={86} width={80} />
-                        <Progress type="circle" percent={67} width={80} />
-                        <Progress type="circle" percent={14} width={80} />
+                        <Progress
+                          type="circle"
+                          percent={86}
+                          width={80}
+                          strokeColor="blue"
+                        />
+                        <Progress
+                          type="circle"
+                          percent={67}
+                          width={80}
+                          strokeColor="green"
+                        />
+                        <Progress
+                          type="circle"
+                          percent={14}
+                          width={80}
+                          strokeColor="red"
+                        />
                       </div>
+                      <img
+                        src={Cchart}
+                        alt="chart"
+                        style={{ width: "-webkit-fill-available" }}
+                      />
                     </Card>
                   </div>
                   <div style={{ display: "flex", flexDirection: "row" }}>
@@ -556,35 +578,109 @@ total created orders */}
                     </Card>
 
                     <Card style={{ width: 569.08, borderRadius: 12 }}>
-                      <text className="m-text" style={{ marginTop: 30 }}>
+                      <text className="ml-text" style={{ marginTop: 30 }}>
                         Delivered Orders
                       </text>
-                      <div style={{ marginTop: 10 }}>
-                        <Progress
-                          style={{ marginBottom: 25 }}
-                          strokeLinecap="square"
-                          percent={75}
-                        />
-                        <Progress
-                          style={{ marginBottom: 25 }}
-                          strokeLinecap="square"
-                          percent={50}
-                        />
-                        <Progress
-                          style={{ marginBottom: 25 }}
-                          strokeLinecap="square"
-                          percent={60}
-                        />
-                        <Progress
-                          style={{ marginBottom: 25 }}
-                          strokeLinecap="square"
-                          percent={35}
-                        />
-                        <Progress
-                          style={{ marginBottom: 25 }}
-                          strokeLinecap="square"
-                          percent={70}
-                        />
+                      <div style={{ marginTop: 28 }}>
+                        <div style={{ display: "flex", flexDirection: "row" }}>
+                          <text
+                            style={{
+                              fontSize: 10,
+                              fontWeight: 400,
+                              color: "#92929d",
+                            }}
+                          >
+                            Today
+                          </text>
+                          <Progress
+                            style={{
+                              marginBottom: 25,
+                              marginLeft: 55,
+                            }}
+                            strokeLinecap="square"
+                            percent={75}
+                            showInfo={false}
+                            width={50}
+                          />
+                        </div>
+
+                        <div style={{ display: "flex", flexDirection: "row" }}>
+                          <text
+                            style={{
+                              fontSize: 10,
+                              fontWeight: 400,
+                              marginRight: 46,
+                              color: "#92929d",
+                            }}
+                          >
+                            Yesteray
+                          </text>
+                          <Progress
+                            style={{ marginBottom: 25 }}
+                            strokeLinecap="square"
+                            percent={50}
+                            showInfo={false}
+                          />
+                        </div>
+
+                        <div style={{ display: "flex", flexDirection: "row" }}>
+                          <text
+                            style={{
+                              fontSize: 10,
+                              fontWeight: 400,
+                              marginRight: 46,
+                              minWidth: "fit-content",
+                              color: "#92929d",
+                            }}
+                          >
+                            01 March
+                          </text>
+                          <Progress
+                            style={{ marginBottom: 25 }}
+                            strokeLinecap="square"
+                            percent={60}
+                            showInfo={false}
+                          />
+                        </div>
+
+                        <div style={{ display: "flex", flexDirection: "row" }}>
+                          <text
+                            style={{
+                              fontSize: 10,
+                              fontWeight: 400,
+                              marginRight: 46,
+                              minWidth: "fit-content",
+                              color: "#92929d",
+                            }}
+                          >
+                            02 March
+                          </text>
+                          <Progress
+                            style={{ marginBottom: 25 }}
+                            strokeLinecap="square"
+                            percent={35}
+                            showInfo={false}
+                          />
+                        </div>
+
+                        <div style={{ display: "flex", flexDirection: "row" }}>
+                          <text
+                            style={{
+                              fontSize: 10,
+                              fontWeight: 400,
+                              color: "#92929d",
+                              minWidth: "fit-content",
+                            }}
+                          >
+                            03 March
+                          </text>
+                          <Progress
+                            style={{ marginBottom: 25, marginLeft: 46 }}
+                            strokeLinecap="square"
+                            percent={70}
+                            showInfo={false}
+                          />
+                        </div>
                       </div>
                     </Card>
                   </div>
