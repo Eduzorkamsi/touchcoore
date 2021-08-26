@@ -14,8 +14,8 @@
 .ant-badge-dot,
 .ant-badge .ant-scroll-number-custom-component {
   position: absolute;
-  top: 25px;
-  right: 3px;
+  top: 35px;
+  right: 1px;
 }
 
 .ant-input-search
@@ -106,4 +106,9 @@
 .ant-badge-status-dot {
   width: 14px;
   height: 14px;
+}
+
+.ant-avatar {
+  width: 44px;
+  height: 44px;
 }

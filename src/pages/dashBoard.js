@@ -1,9 +1,9 @@
 import React from "react";
-import { Layout, Menu, Card, Avatar, Progress, Badge } from "antd";
-import { DownOutlined } from "@ant-design/icons";
+import { Layout, Menu, Card, Avatar, Progress, Badge, Input } from "antd";
+import { DownOutlined, SearchOutlined } from "@ant-design/icons";
 import Logo1 from "../assets/dashboardlogo.png";
 import "../styles/dashboard.css";
-// import Avatar1 from "../assets/avatar.png";
+import Avatar1 from "../assets/avatar.png";
 import Avatar2 from "../assets/avatar2.png";
 import Dashboardimg from "../assets/Dashboard.png";
 import Companies from "../assets/Companies.png";
@@ -24,7 +24,6 @@ import Bline from "../assets/bline.png";
 import Rline from "../assets/rline.png";
 import { Link } from "react-router-dom";
 import Cchart from "../assets/cchart.png";
-// import Chartjs from "../component/chart";
 
 const DashBoard = () => {
   //   const { SubMenu } = Menu;
@@ -45,32 +44,80 @@ const DashBoard = () => {
             />
           </Link>
 
-          <Menu
-            mode="horizontal"
+          <div
             style={{
               display: "flex",
+              flexDirection: "row",
               justifyContent: "space-between",
               marginLeft: "8%",
+              minWidth: "max-content",
             }}
           >
-            {/* <Menu.Item>
-              <text>Search</text>
-            </Menu.Item>
-            <Menu.Item className="avatar1">
-              {" "}
-              <span>
-                <Badge dot>
-                  <Avatar src={Avatar1} />
-                </Badge>
-              </span>
-            </Menu.Item>
-            <Menu.Item>
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <text>Jude Adam</text>
-                <text>Admin</text>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                marginRight: "260%",
+              }}
+            >
+              <SearchOutlined
+                style={{
+                  fontSize: 25,
+                  fontWeight: 500,
+                  marginLeft: 22,
+                  marginTop: 25,
+                }}
+              />
+              <Input
+                placeholder="Search"
+                bordered={false}
+                style={{ border: "none" }}
+              />
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              <div>
+                <span>
+                  <Badge dot>
+                    <Avatar src={Avatar1} />
+                  </Badge>
+                </span>
               </div>
-            </Menu.Item> */}
-          </Menu>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  marginLeft: 14,
+                }}
+              >
+                <text
+                  style={{
+                    fontSize: 14,
+                    fontWeight: 700,
+                    width: "max-content",
+                    marginTop: "-10px",
+                  }}
+                >
+                  Jude Adam
+                </text>
+                <text
+                  style={{
+                    fontWeight: 500,
+                    fontSize: 14,
+                    color: "#e5e5e5",
+                    marginTop: "-50px",
+                  }}
+                >
+                  Admin
+                </text>
+              </div>
+            </div>
+          </div>
         </Header>
         <Layout>
           <Sider width={200} className="site-layout-background">
